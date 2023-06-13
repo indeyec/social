@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use app\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::get('/signin',[SigninController::class, 'index']);
+Route::post('/signin',[SigninController::class, 'store']);
 
 /**
  * Auth

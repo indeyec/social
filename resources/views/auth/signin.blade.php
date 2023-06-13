@@ -30,11 +30,25 @@
                 </span>
                     @endif
                 </div>
+
+                <div class="col-md-12 form-group">
+                    {!! captcha_img('math') !!}
+                    <input type="text" name="captcha" required>
+                    @if ($errors->has('captcha'))
+                        <span class="text-danger">
+                            <strong>{{ $errors->first('captcha') }}</strong>
+                    </span>
+                    @endif
+                </div>
+
                 <div class="col-auto my-1">
                     <div class="custom-control custom-checkbox mr-sm-2 mb-3">
                         <input name="remember" type="checkbox" class="custom-control-input" id="remember">
                         <label class="custom-control-label" for="remember">Запомнить меня</label>
                     </div>
+
+                    
+
                 </div>
                 <button type="submit" class="btn btn-primary">Войти</button>
             </form>
