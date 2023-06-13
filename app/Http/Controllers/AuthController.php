@@ -58,4 +58,8 @@ class AuthController extends Controller
 
         return redirect()->route('home');
     }
+
 }
+
+
+
